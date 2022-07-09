@@ -1,0 +1,16 @@
+disabled_rules:
+
+
+excluded:
+- Pods/
+- Podfile
+- Podfile.lock
+- vendor/
+
+# 1行の文字数が200超えると警告、300超えるとエラーにする
+line_length:
+- 200 # warning
+- 300 # error
+
+# force cast は暫定的にwarningへ
+force_cast: warning

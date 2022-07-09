@@ -1,6 +1,6 @@
 //
-//  sharehoshiApp.swift
-//  sharehoshi
+//  SharehoshiApp.swift
+//  Sharehoshi
 //
 //  2022/07/09.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct sharehoshiApp: App {
+struct SharehoshiApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

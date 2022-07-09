@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB1069D82879403600C3A997 /* sharehoshiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069D72879403600C3A997 /* sharehoshiApp.swift */; };
+		301EDA84641AECE025967DF6 /* Pods_sharehoshi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438199004B5B805342223C90 /* Pods_sharehoshi.framework */; };
+		9790BA1D2EEE476D53436D70 /* Pods_sharehoshiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A253E45E3C02FC179DF2876C /* Pods_sharehoshiTests.framework */; };
+		A961B3BA58ED60DD2A44516E /* Pods_sharehoshi_sharehoshiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE1230F2C9461D0F42D28B9 /* Pods_sharehoshi_sharehoshiUITests.framework */; };
+		CB1069D82879403600C3A997 /* SharehoshiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069D72879403600C3A997 /* SharehoshiApp.swift */; };
 		CB1069DA2879403600C3A997 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069D92879403600C3A997 /* ContentView.swift */; };
 		CB1069DC2879403700C3A997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1069DB2879403700C3A997 /* Assets.xcassets */; };
 		CB1069DF2879403700C3A997 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1069DE2879403700C3A997 /* Preview Assets.xcassets */; };
-		CB1069E92879403800C3A997 /* sharehoshiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069E82879403800C3A997 /* sharehoshiTests.swift */; };
-		CB1069F32879403800C3A997 /* sharehoshiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F22879403800C3A997 /* sharehoshiUITests.swift */; };
-		CB1069F52879403800C3A997 /* sharehoshiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F42879403800C3A997 /* sharehoshiUITestsLaunchTests.swift */; };
+		CB1069E92879403800C3A997 /* SharehoshiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069E82879403800C3A997 /* SharehoshiTests.swift */; };
+		CB1069F32879403800C3A997 /* SharehoshiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F22879403800C3A997 /* SharehoshiUITests.swift */; };
+		CB1069F52879403800C3A997 /* SharehoshiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,16 +37,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3619AC901C45795FC55FD110 /* Pods-sharehoshi-sharehoshiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshi-sharehoshiUITests.release.xcconfig"; path = "Target Support Files/Pods-sharehoshi-sharehoshiUITests/Pods-sharehoshi-sharehoshiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		438199004B5B805342223C90 /* Pods_sharehoshi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sharehoshi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5453DE1686FF55A06F14E003 /* Pods-sharehoshi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshi.debug.xcconfig"; path = "Target Support Files/Pods-sharehoshi/Pods-sharehoshi.debug.xcconfig"; sourceTree = "<group>"; };
+		6E17F083925EF95590C36A93 /* Pods-sharehoshi-sharehoshiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshi-sharehoshiUITests.debug.xcconfig"; path = "Target Support Files/Pods-sharehoshi-sharehoshiUITests/Pods-sharehoshi-sharehoshiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CE1230F2C9461D0F42D28B9 /* Pods_sharehoshi_sharehoshiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sharehoshi_sharehoshiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A253E45E3C02FC179DF2876C /* Pods_sharehoshiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sharehoshiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C848E30C2936D9D13AA86F80 /* Pods-sharehoshiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshiTests.debug.xcconfig"; path = "Target Support Files/Pods-sharehoshiTests/Pods-sharehoshiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB1069D42879403600C3A997 /* sharehoshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharehoshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB1069D72879403600C3A997 /* sharehoshiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharehoshiApp.swift; sourceTree = "<group>"; };
+		CB1069D72879403600C3A997 /* SharehoshiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharehoshiApp.swift; sourceTree = "<group>"; };
 		CB1069D92879403600C3A997 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB1069DB2879403700C3A997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB1069DE2879403700C3A997 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB1069E42879403800C3A997 /* sharehoshiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sharehoshiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB1069E82879403800C3A997 /* sharehoshiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharehoshiTests.swift; sourceTree = "<group>"; };
+		CB1069E82879403800C3A997 /* SharehoshiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharehoshiTests.swift; sourceTree = "<group>"; };
 		CB1069EE2879403800C3A997 /* sharehoshiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sharehoshiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB1069F22879403800C3A997 /* sharehoshiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharehoshiUITests.swift; sourceTree = "<group>"; };
-		CB1069F42879403800C3A997 /* sharehoshiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sharehoshiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CB1069F22879403800C3A997 /* SharehoshiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharehoshiUITests.swift; sourceTree = "<group>"; };
+		CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharehoshiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E4A8B6B9F808D53ACB2A189D /* Pods-sharehoshiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshiTests.release.xcconfig"; path = "Target Support Files/Pods-sharehoshiTests/Pods-sharehoshiTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA971C2E25F593E906EC966B /* Pods-sharehoshi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshi.release.xcconfig"; path = "Target Support Files/Pods-sharehoshi/Pods-sharehoshi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301EDA84641AECE025967DF6 /* Pods_sharehoshi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9790BA1D2EEE476D53436D70 /* Pods_sharehoshiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,12 +79,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A961B3BA58ED60DD2A44516E /* Pods_sharehoshi_sharehoshiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4654B76BC1AE62255C4BCBEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438199004B5B805342223C90 /* Pods_sharehoshi.framework */,
+				8CE1230F2C9461D0F42D28B9 /* Pods_sharehoshi_sharehoshiUITests.framework */,
+				A253E45E3C02FC179DF2876C /* Pods_sharehoshiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB1069CB2879403600C3A997 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +103,8 @@
 				CB1069E72879403800C3A997 /* sharehoshiTests */,
 				CB1069F12879403800C3A997 /* sharehoshiUITests */,
 				CB1069D52879403600C3A997 /* Products */,
+				D1FF3B9211A548713C72ACD8 /* Pods */,
+				4654B76BC1AE62255C4BCBEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,7 +121,7 @@
 		CB1069D62879403600C3A997 /* sharehoshi */ = {
 			isa = PBXGroup;
 			children = (
-				CB1069D72879403600C3A997 /* sharehoshiApp.swift */,
+				CB1069D72879403600C3A997 /* SharehoshiApp.swift */,
 				CB1069D92879403600C3A997 /* ContentView.swift */,
 				CB1069DB2879403700C3A997 /* Assets.xcassets */,
 				CB1069DD2879403700C3A997 /* Preview Content */,
@@ -113,7 +140,7 @@
 		CB1069E72879403800C3A997 /* sharehoshiTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB1069E82879403800C3A997 /* sharehoshiTests.swift */,
+				CB1069E82879403800C3A997 /* SharehoshiTests.swift */,
 			);
 			path = sharehoshiTests;
 			sourceTree = "<group>";
@@ -121,10 +148,23 @@
 		CB1069F12879403800C3A997 /* sharehoshiUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CB1069F22879403800C3A997 /* sharehoshiUITests.swift */,
-				CB1069F42879403800C3A997 /* sharehoshiUITestsLaunchTests.swift */,
+				CB1069F22879403800C3A997 /* SharehoshiUITests.swift */,
+				CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */,
 			);
 			path = sharehoshiUITests;
+			sourceTree = "<group>";
+		};
+		D1FF3B9211A548713C72ACD8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5453DE1686FF55A06F14E003 /* Pods-sharehoshi.debug.xcconfig */,
+				FA971C2E25F593E906EC966B /* Pods-sharehoshi.release.xcconfig */,
+				6E17F083925EF95590C36A93 /* Pods-sharehoshi-sharehoshiUITests.debug.xcconfig */,
+				3619AC901C45795FC55FD110 /* Pods-sharehoshi-sharehoshiUITests.release.xcconfig */,
+				C848E30C2936D9D13AA86F80 /* Pods-sharehoshiTests.debug.xcconfig */,
+				E4A8B6B9F808D53ACB2A189D /* Pods-sharehoshiTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +174,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB1069F82879403800C3A997 /* Build configuration list for PBXNativeTarget "sharehoshi" */;
 			buildPhases = (
+				A893FE077FC3DE85ECDDCBE5 /* [CP] Check Pods Manifest.lock */,
+				CB106A012879CBA200C3A997 /* Run SwiftLint */,
 				CB1069D02879403600C3A997 /* Sources */,
 				CB1069D12879403600C3A997 /* Frameworks */,
 				CB1069D22879403600C3A997 /* Resources */,
@@ -151,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB1069FB2879403800C3A997 /* Build configuration list for PBXNativeTarget "sharehoshiTests" */;
 			buildPhases = (
+				E59C5C154DB7A19484EA219C /* [CP] Check Pods Manifest.lock */,
 				CB1069E02879403800C3A997 /* Sources */,
 				CB1069E12879403800C3A997 /* Frameworks */,
 				CB1069E22879403800C3A997 /* Resources */,
@@ -169,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB1069FE2879403800C3A997 /* Build configuration list for PBXNativeTarget "sharehoshiUITests" */;
 			buildPhases = (
+				25871324410D0F4E2F9F756D /* [CP] Check Pods Manifest.lock */,
 				CB1069EA2879403800C3A997 /* Sources */,
 				CB1069EB2879403800C3A997 /* Frameworks */,
 				CB1069EC2879403800C3A997 /* Resources */,
@@ -252,13 +296,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25871324410D0F4E2F9F756D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sharehoshi-sharehoshiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A893FE077FC3DE85ECDDCBE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sharehoshi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB106A012879CBA200C3A997 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		E59C5C154DB7A19484EA219C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sharehoshiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CB1069D02879403600C3A997 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CB1069DA2879403600C3A997 /* ContentView.swift in Sources */,
-				CB1069D82879403600C3A997 /* sharehoshiApp.swift in Sources */,
+				CB1069D82879403600C3A997 /* SharehoshiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB1069E92879403800C3A997 /* sharehoshiTests.swift in Sources */,
+				CB1069E92879403800C3A997 /* SharehoshiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +405,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB1069F52879403800C3A997 /* sharehoshiUITestsLaunchTests.swift in Sources */,
-				CB1069F32879403800C3A997 /* sharehoshiUITests.swift in Sources */,
+				CB1069F52879403800C3A997 /* SharehoshiUITestsLaunchTests.swift in Sources */,
+				CB1069F32879403800C3A997 /* SharehoshiUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +542,7 @@
 		};
 		CB1069F92879403800C3A997 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5453DE1686FF55A06F14E003 /* Pods-sharehoshi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +572,7 @@
 		};
 		CB1069FA2879403800C3A997 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA971C2E25F593E906EC966B /* Pods-sharehoshi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +602,7 @@
 		};
 		CB1069FC2879403800C3A997 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C848E30C2936D9D13AA86F80 /* Pods-sharehoshiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +623,7 @@
 		};
 		CB1069FD2879403800C3A997 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4A8B6B9F808D53ACB2A189D /* Pods-sharehoshiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,6 +644,7 @@
 		};
 		CB1069FF2879403800C3A997 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E17F083925EF95590C36A93 /* Pods-sharehoshi-sharehoshiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +663,7 @@
 		};
 		CB106A002879403800C3A997 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3619AC901C45795FC55FD110 /* Pods-sharehoshi-sharehoshiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

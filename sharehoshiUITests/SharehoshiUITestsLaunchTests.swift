@@ -1,13 +1,13 @@
 //
-//  sharehoshiUITestsLaunchTests.swift
-//  sharehoshiUITests
+//  SharehoshiUITestsLaunchTests.swift
+//  SharehoshiUITests
 //
 //  2022/07/09.
 //
 
 import XCTest
 
-class sharehoshiUITestsLaunchTests: XCTestCase {
+class SharehoshiUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
