@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MyWishList: View {
+struct MyWishListView: View {
     var body: some View {
         Text("私のほしい物リスト")
     }
@@ -15,6 +15,6 @@ struct MyWishList: View {
 
 struct MyWishList_Previews: PreviewProvider {
     static var previews: some View {
-        MyWishList()
+        MyWishListView()
     }
 }
