@@ -18,8 +18,8 @@
 		CB1069F32879403800C3A997 /* SharehoshiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F22879403800C3A997 /* SharehoshiUITests.swift */; };
 		CB1069F52879403800C3A997 /* SharehoshiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */; };
 		CB106A032879E9E200C3A997 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB106A022879E9E200C3A997 /* GoogleService-Info.plist */; };
-		CB2CA7782882A9DE00F41F9C /* MyWishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA7772882A9DE00F41F9C /* MyWishList.swift */; };
-		CB2CA77A2882A9FA00F41F9C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA7792882A9FA00F41F9C /* Setting.swift */; };
+		CB2CA7782882A9DE00F41F9C /* MyWishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA7772882A9DE00F41F9C /* MyWishListView.swift */; };
+		CB2CA77A2882A9FA00F41F9C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA7792882A9FA00F41F9C /* SettingView.swift */; };
 		CB6F4E972882A533008410A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F4E962882A533008410A8 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +60,8 @@
 		CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharehoshiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB106A022879E9E200C3A997 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB106A04287A77D300C3A997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		CB2CA7772882A9DE00F41F9C /* MyWishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishList.swift; sourceTree = "<group>"; };
-		CB2CA7792882A9FA00F41F9C /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		CB2CA7772882A9DE00F41F9C /* MyWishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishListView.swift; sourceTree = "<group>"; };
+		CB2CA7792882A9FA00F41F9C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		CB6F4E8A28829C02008410A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		CB6F4E8D28829C1D008410A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		CB6F4E962882A533008410A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -190,8 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				CB1069D92879403600C3A997 /* LoginView.swift */,
-				CB2CA7772882A9DE00F41F9C /* MyWishList.swift */,
-				CB2CA7792882A9FA00F41F9C /* Setting.swift */,
+				CB2CA7772882A9DE00F41F9C /* MyWishListView.swift */,
+				CB2CA7792882A9FA00F41F9C /* SettingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -467,8 +467,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2CA77A2882A9FA00F41F9C /* Setting.swift in Sources */,
-				CB2CA7782882A9DE00F41F9C /* MyWishList.swift in Sources */,
+				CB2CA77A2882A9FA00F41F9C /* SettingView.swift in Sources */,
+				CB2CA7782882A9DE00F41F9C /* MyWishListView.swift in Sources */,
 				CB1069DA2879403600C3A997 /* LoginView.swift in Sources */,
 				CB1069D82879403600C3A997 /* SharehoshiApp.swift in Sources */,
 				CB6F4E972882A533008410A8 /* ContentView.swift in Sources */,

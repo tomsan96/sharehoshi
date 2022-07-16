@@ -1,5 +1,5 @@
 //
-//  Setting.swift
+//  SettingView.swift
 //  sharehoshi
 //
 //  2022/07/16.
