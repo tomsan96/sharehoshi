@@ -18,6 +18,9 @@
 		CB1069F32879403800C3A997 /* SharehoshiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F22879403800C3A997 /* SharehoshiUITests.swift */; };
 		CB1069F52879403800C3A997 /* SharehoshiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */; };
 		CB106A032879E9E200C3A997 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB106A022879E9E200C3A997 /* GoogleService-Info.plist */; };
+		CB2CA7782882A9DE00F41F9C /* MyWishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA7772882A9DE00F41F9C /* MyWishList.swift */; };
+		CB2CA77A2882A9FA00F41F9C /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA7792882A9FA00F41F9C /* Setting.swift */; };
+		CB6F4E972882A533008410A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F4E962882A533008410A8 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +50,7 @@
 		C848E30C2936D9D13AA86F80 /* Pods-sharehoshiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshiTests.debug.xcconfig"; path = "Target Support Files/Pods-sharehoshiTests/Pods-sharehoshiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB1069D42879403600C3A997 /* sharehoshi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sharehoshi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1069D72879403600C3A997 /* SharehoshiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharehoshiApp.swift; sourceTree = "<group>"; };
-		CB1069D92879403600C3A997 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CB1069D92879403600C3A997 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = ../LoginView.swift; sourceTree = "<group>"; };
 		CB1069DB2879403700C3A997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB1069DE2879403700C3A997 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CB1069E42879403800C3A997 /* sharehoshiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sharehoshiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,9 +60,11 @@
 		CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharehoshiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB106A022879E9E200C3A997 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB106A04287A77D300C3A997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CB2CA7772882A9DE00F41F9C /* MyWishList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishList.swift; sourceTree = "<group>"; };
+		CB2CA7792882A9FA00F41F9C /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		CB6F4E8A28829C02008410A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		CB6F4E8D28829C1D008410A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		CB6F4E8F28829C1D008410A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		CB6F4E962882A533008410A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4A8B6B9F808D53ACB2A189D /* Pods-sharehoshiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshiTests.release.xcconfig"; path = "Target Support Files/Pods-sharehoshiTests/Pods-sharehoshiTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA971C2E25F593E906EC966B /* Pods-sharehoshi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshi.release.xcconfig"; path = "Target Support Files/Pods-sharehoshi/Pods-sharehoshi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,13 +132,13 @@
 		CB1069D62879403600C3A997 /* sharehoshi */ = {
 			isa = PBXGroup;
 			children = (
+				CB6F4E962882A533008410A8 /* ContentView.swift */,
 				CB6F4E8C28829C1D008410A8 /* ViewModels */,
 				CB6F4E8E28829C1D008410A8 /* Views */,
 				CB6F4E8928829C02008410A8 /* Models */,
 				CB106A04287A77D300C3A997 /* Info.plist */,
 				CB106A022879E9E200C3A997 /* GoogleService-Info.plist */,
 				CB1069D72879403600C3A997 /* SharehoshiApp.swift */,
-				CB1069D92879403600C3A997 /* LoginView.swift */,
 				CB1069DB2879403700C3A997 /* Assets.xcassets */,
 				CB1069DD2879403700C3A997 /* Preview Content */,
 			);
@@ -184,7 +189,9 @@
 		CB6F4E8E28829C1D008410A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CB6F4E8F28829C1D008410A8 /* .gitkeep */,
+				CB1069D92879403600C3A997 /* LoginView.swift */,
+				CB2CA7772882A9DE00F41F9C /* MyWishList.swift */,
+				CB2CA7792882A9FA00F41F9C /* Setting.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -460,8 +467,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2CA77A2882A9FA00F41F9C /* Setting.swift in Sources */,
+				CB2CA7782882A9DE00F41F9C /* MyWishList.swift in Sources */,
 				CB1069DA2879403600C3A997 /* LoginView.swift in Sources */,
 				CB1069D82879403600C3A997 /* SharehoshiApp.swift in Sources */,
+				CB6F4E972882A533008410A8 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
