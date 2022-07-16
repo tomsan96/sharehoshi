@@ -18,9 +18,6 @@
 		CB1069F32879403800C3A997 /* SharehoshiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F22879403800C3A997 /* SharehoshiUITests.swift */; };
 		CB1069F52879403800C3A997 /* SharehoshiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */; };
 		CB106A032879E9E200C3A997 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB106A022879E9E200C3A997 /* GoogleService-Info.plist */; };
-		CB6F4E8B28829C02008410A8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CB6F4E8A28829C02008410A8 /* .gitkeep */; };
-		CB6F4E9028829C1D008410A8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CB6F4E8D28829C1D008410A8 /* .gitkeep */; };
-		CB6F4E9128829C1D008410A8 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = CB6F4E8F28829C1D008410A8 /* .gitkeep */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -317,10 +314,7 @@
 			files = (
 				CB1069DF2879403700C3A997 /* Preview Assets.xcassets in Resources */,
 				CB106A032879E9E200C3A997 /* GoogleService-Info.plist in Resources */,
-				CB6F4E9028829C1D008410A8 /* .gitkeep in Resources */,
-				CB6F4E9128829C1D008410A8 /* .gitkeep in Resources */,
 				CB1069DC2879403700C3A997 /* Assets.xcassets in Resources */,
-				CB6F4E8B28829C02008410A8 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
