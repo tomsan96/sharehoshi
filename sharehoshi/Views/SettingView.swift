@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct SettingView: View {
+    @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
-        Text("設定")
+        VStack {
+            Text("設定")
+            Button("ログアウト") {
+                viewModel.signOut()
+            }
+        }
     }
 }
 
