@@ -12,5 +12,3 @@ line_length:
 - 200 # warning
 - 300 # error
 
-# force cast は暫定的にwarningへ
-force_cast: warning
