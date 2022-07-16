@@ -8,18 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: AuthenticationViewModel
+
     var body: some View {
-        TabView {
-            MyWishListView()
-                .tabItem {
-                    Image(systemName: "cart")
-                    Text("欲しいもの")
-                }
-            SettingView()
-                .tabItem {
-                    Image(systemName: "gearshape")
-                    Text("設定")
-                }
+        switch viewModel.state {
+        case .signedIn:
+            FooterTabView()
+        case .signedOut:
+            LoginView()
         }
     }
 }
