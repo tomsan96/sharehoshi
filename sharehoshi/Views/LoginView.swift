@@ -17,7 +17,6 @@ struct LoginView: View {
 }
 
 struct GoogleSignInButton: UIViewRepresentable {
-    // TODO: ログイン後の処理
     func makeUIView(context: Context) -> GIDSignInButton {
         let button = GIDSignInButton()
         button.addAction(.init(handler: { _ in
