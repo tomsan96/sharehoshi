@@ -12,18 +12,18 @@ import GoogleSignIn
 
 class AuthenticationViewModel: ObservableObject {
     enum SignInState {
-      case signedIn
-      case signedOut
+        case signedIn
+        case signedOut
     }
 
     @Published var state: SignInState = .signedOut
 
     init() {
         if GIDSignIn.sharedInstance.hasPreviousSignIn() {
-          GIDSignIn.sharedInstance.restorePreviousSignIn { [weak self] user, error in
-              guard let self = self else { return }
-              self.authenticateUser(user: user, error: error)
-          }
+            GIDSignIn.sharedInstance.restorePreviousSignIn { [weak self] user, error in
+                guard let self = self else { return }
+                self.authenticateUser(user: user, error: error)
+            }
         }
     }
 
@@ -39,30 +39,28 @@ class AuthenticationViewModel: ObservableObject {
 
     private func authenticateUser(user: GIDGoogleUser?, error: Error?) {
         if let error = error {
-          print(error.localizedDescription)
-          return
+            print(error.localizedDescription)
+            return
         }
         guard let authentication = user?.authentication,
               let idToken = authentication.idToken else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
         Auth.auth().signIn(with: credential) { (_, error) in
             if let error = error {
-              print("error: \(error.localizedDescription)")
+                print("error: \(error.localizedDescription)")
             } else {
-              self.state = .signedIn
+                self.state = .signedIn
             }
         }
     }
 
     func signOut() {
-      GIDSignIn.sharedInstance.signOut()
-
-      do {
-        try Auth.auth().signOut()
-
-        state = .signedOut
-      } catch {
-        print(error.localizedDescription)
-      }
+        GIDSignIn.sharedInstance.signOut()
+        do {
+            try Auth.auth().signOut()
+            state = .signedOut
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
