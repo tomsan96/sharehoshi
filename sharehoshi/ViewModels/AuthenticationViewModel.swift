@@ -9,6 +9,7 @@ import Foundation
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
+import FirebaseFirestore
 
 class AuthenticationViewModel: ObservableObject {
     enum SignInState {
@@ -58,8 +59,17 @@ class AuthenticationViewModel: ObservableObject {
             DispatchQueue.main.async {
                 self.state = .signedIn
             }
-            // TODO: firestoreのusersにresult.user.uidを登録する
-            print(result.user.uid)
+
+            let database = Firestore.firestore()
+            let usersReference = database.collection("users")
+            let userDocument = try await usersReference.document(result.user.uid).getDocument()
+            if !userDocument.exists {
+                try await usersReference.document(result.user.uid).setData([
+                    // TODO: フィールドの登録
+                    "displayId": result.user.uid,
+                    "displayName": ""
+                ])
+            }
         } catch {
             print("error: \(error.localizedDescription)")
         }
