@@ -22,6 +22,7 @@
 		CB2CA77A2882A9FA00F41F9C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA7792882A9FA00F41F9C /* SettingView.swift */; };
 		CB2CA77C2883001600F41F9C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA77B2883001600F41F9C /* AuthenticationViewModel.swift */; };
 		CB2CA77E288306A500F41F9C /* FooterTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA77D288306A500F41F9C /* FooterTabView.swift */; };
+		CB2CA7802885898800F41F9C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA77F2885898800F41F9C /* User.swift */; };
 		CB6F4E972882A533008410A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F4E962882A533008410A8 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +67,7 @@
 		CB2CA7792882A9FA00F41F9C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		CB2CA77B2883001600F41F9C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		CB2CA77D288306A500F41F9C /* FooterTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTabView.swift; sourceTree = "<group>"; };
-		CB6F4E8A28829C02008410A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		CB2CA77F2885898800F41F9C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CB6F4E962882A533008410A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4A8B6B9F808D53ACB2A189D /* Pods-sharehoshiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshiTests.release.xcconfig"; path = "Target Support Files/Pods-sharehoshiTests/Pods-sharehoshiTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA971C2E25F593E906EC966B /* Pods-sharehoshi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshi.release.xcconfig"; path = "Target Support Files/Pods-sharehoshi/Pods-sharehoshi.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,7 +177,7 @@
 		CB6F4E8928829C02008410A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CB6F4E8A28829C02008410A8 /* .gitkeep */,
+				CB2CA77F2885898800F41F9C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -475,6 +476,7 @@
 				CB2CA77A2882A9FA00F41F9C /* SettingView.swift in Sources */,
 				CB2CA7782882A9DE00F41F9C /* MyWishListView.swift in Sources */,
 				CB1069DA2879403600C3A997 /* LoginView.swift in Sources */,
+				CB2CA7802885898800F41F9C /* User.swift in Sources */,
 				CB1069D82879403600C3A997 /* SharehoshiApp.swift in Sources */,
 				CB2CA77E288306A500F41F9C /* FooterTabView.swift in Sources */,
 				CB6F4E972882A533008410A8 /* ContentView.swift in Sources */,

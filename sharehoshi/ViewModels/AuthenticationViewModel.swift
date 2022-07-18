@@ -10,6 +10,7 @@ import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class AuthenticationViewModel: ObservableObject {
     enum SignInState {
@@ -63,12 +64,12 @@ class AuthenticationViewModel: ObservableObject {
             let database = Firestore.firestore()
             let usersReference = database.collection("users")
             let userDocument = try await usersReference.document(result.user.uid).getDocument()
+            let userInforamation = User(
+                displayId: result.user.uid,
+                displayName: ""
+            )
             if !userDocument.exists {
-                try await usersReference.document(result.user.uid).setData([
-                    // TODO: フィールドの登録
-                    "displayId": result.user.uid,
-                    "displayName": ""
-                ])
+                try usersReference.document(result.user.uid).setData(from: userInforamation)
             }
         } catch {
             print("error: \(error.localizedDescription)")

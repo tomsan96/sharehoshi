@@ -8,8 +8,8 @@ target 'sharehoshi' do
   pod 'SwiftLint'
   pod 'FirebaseAuth'
   pod 'GoogleSignIn'
-  pod 'FirebaseFirestore'
-
+  pod 'FirebaseFirestore',  '~> 9.0'
+  pod 'FirebaseFirestoreSwift',  '~> 9.0'
   target 'sharehoshiTests' do
     inherit! :search_paths
     # Pods for testing
