@@ -68,7 +68,6 @@
 		CB2CA77B2883001600F41F9C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		CB2CA77D288306A500F41F9C /* FooterTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTabView.swift; sourceTree = "<group>"; };
 		CB2CA77F2885898800F41F9C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CB6F4E8A28829C02008410A8 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		CB6F4E962882A533008410A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4A8B6B9F808D53ACB2A189D /* Pods-sharehoshiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshiTests.release.xcconfig"; path = "Target Support Files/Pods-sharehoshiTests/Pods-sharehoshiTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA971C2E25F593E906EC966B /* Pods-sharehoshi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshi.release.xcconfig"; path = "Target Support Files/Pods-sharehoshi/Pods-sharehoshi.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,7 +177,6 @@
 		CB6F4E8928829C02008410A8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CB6F4E8A28829C02008410A8 /* .gitkeep */,
 				CB2CA77F2885898800F41F9C /* User.swift */,
 			);
 			path = Models;
