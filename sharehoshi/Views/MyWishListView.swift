@@ -14,12 +14,13 @@ struct MyWishListView: View {
         WishProduct(id: "3", name: "商品c", imageUrl: nil, webUrl: nil, amount: 2300, createdAt: Date()),
         WishProduct(id: "4", name: "商品d", imageUrl: nil, webUrl: nil, amount: 100, createdAt: Date()),
         WishProduct(id: "5", name: "商品e", imageUrl: nil, webUrl: nil, amount: 1100, createdAt: Date()),
-        WishProduct(id: "6", name: "商品f", imageUrl: nil, webUrl: nil, amount: 10000, createdAt: Date())
+        WishProduct(id: "6", name: "商品f", imageUrl: nil, webUrl: nil, amount: 1000000, createdAt: Date())
     ]
 
     var body: some View {
         List(wishProducts) { product in
             WishListRowView(wishProduct: product)
+                .frame(height: 88)
         }
     }
 }
