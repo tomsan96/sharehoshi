@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WishProduct: Codable {
+struct WishProduct: Codable, Identifiable {
     let id: String
     let name: String?
     let imageUrl: URL?
