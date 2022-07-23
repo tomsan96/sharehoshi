@@ -16,14 +16,33 @@ struct MyWishListView: View {
     let myWishListViewModel = MyWishListViewModel()
 
     var body: some View {
-        List(myWishList) { product in
-            WishListRowView(wishProduct: product)
-                .frame(height: 88)
-        }
-        .task {
-            Task {
-                do {
-                    myWishList = try await self.myWishListViewModel.getMyWishList(uid: self.authenticationViewModel.uid ?? "")
+        ZStack {
+            List(myWishList) { product in
+                WishListRowView(wishProduct: product)
+                    .frame(height: 88)
+            }
+            .task {
+                Task {
+                    do {
+                        myWishList = try await self.myWishListViewModel.getMyWishList(uid: self.authenticationViewModel.uid ?? "")
+                    }
+                }
+            }
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button {
+                        print("add")
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .foregroundColor(Color.white)
+                    .frame(width: 64, height: 64)
+                    .background(Color.blue)
+                    .cornerRadius(32)
+                    .shadow(color: .gray, radius: 2, x: 2, y: 2)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 24, trailing: 24))
                 }
             }
         }
