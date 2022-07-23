@@ -12,21 +12,20 @@ import FirebaseFirestoreSwift
 class MyWishListViewModel {
     let database = Firestore.firestore()
 
-    func getMyWishList(uid: String) {
+    func getMyWishList(uid: String) async throws -> [WishProduct] {
         let usersReference = database.collection("users")
-        let wishList: [WishProduct] = []
-        usersReference.document(uid).collection("wishList").getDocuments() {(querySnapshot, error ) in
-            if let error = error {
-                print("Error getting documents: \(error)")
-                return
-            } else {
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-//                    wishList.append(document.data())
-                }
-                return
-            }
-        }
+        var wishList: [WishProduct] = []
+        let querySnapshot = try await usersReference.document(uid).collection("wishList").getDocuments()
 
+        if !querySnapshot.isEmpty {
+            for document in querySnapshot.documents {
+                guard let wishProduct = try? Firestore.Decoder().decode(WishProduct.self, from: document.data()) else { return [] }
+                wishList.append(wishProduct)
+                print(wishList)
+            }
+        } else {
+            print("Document does not exist")
+        }
+        return wishList
     }
 }
