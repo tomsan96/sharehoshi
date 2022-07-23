@@ -19,6 +19,7 @@ class AuthenticationViewModel: ObservableObject {
     }
 
     @Published var state: SignInState = .signedOut
+    @Published var uid: String?
 
     init() {
         if GIDSignIn.sharedInstance.hasPreviousSignIn() {
@@ -71,6 +72,7 @@ class AuthenticationViewModel: ObservableObject {
             if !userDocument.exists {
                 try usersReference.document(result.user.uid).setData(from: userInforamation)
             }
+            uid = result.user.uid
         } catch {
             print("error: \(error.localizedDescription)")
         }
@@ -85,4 +87,5 @@ class AuthenticationViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+
 }
