@@ -19,6 +19,7 @@ class AuthenticationViewModel: ObservableObject {
     }
 
     @Published var state: SignInState = .signedOut
+    @Published var uid: String?
 
     init() {
         if GIDSignIn.sharedInstance.hasPreviousSignIn() {
@@ -59,6 +60,7 @@ class AuthenticationViewModel: ObservableObject {
             let result = try await Auth.auth().signIn(with: credential)
             DispatchQueue.main.async {
                 self.state = .signedIn
+                self.uid = result.user.uid
             }
 
             let database = Firestore.firestore()
@@ -85,4 +87,5 @@ class AuthenticationViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+
 }
