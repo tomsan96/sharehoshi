@@ -13,6 +13,7 @@ import GoogleSignIn
 struct MyWishListView: View {
     @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
     @State private var myWishList: [WishProduct] = []
+    @State var isPresentedAddWishProductView: Bool = false
     let myWishListViewModel = MyWishListViewModel()
 
     var body: some View {
@@ -34,15 +35,19 @@ struct MyWishListView: View {
                     Spacer()
                     Button {
                         print("add")
+                        isPresentedAddWishProductView = true
                     } label: {
                         Image(systemName: "plus")
+                            .foregroundColor(Color.white)
                     }
-                    .foregroundColor(Color.white)
                     .frame(width: 64, height: 64)
                     .background(Color.blue)
                     .cornerRadius(32)
                     .shadow(color: .gray, radius: 2, x: 2, y: 2)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 24, trailing: 24))
+                    .sheet(isPresented: $isPresentedAddWishProductView) {
+                        AddWishProductView()
+                    }
                 }
             }
         }

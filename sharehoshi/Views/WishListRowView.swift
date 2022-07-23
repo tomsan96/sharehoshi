@@ -2,7 +2,7 @@
 //  WishListRowView.swift
 //  sharehoshi
 //
-//  Created by 山崎定知 on 2022/07/20.
+//  2022/07/20.
 //
 
 import SwiftUI
