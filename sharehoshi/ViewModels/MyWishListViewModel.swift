@@ -11,20 +11,19 @@ import FirebaseFirestoreSwift
 
 class MyWishListViewModel: ObservableObject {
     let database = Firestore.firestore()
-    @Published var myWishList: [WishProduct] = []
 
-    func getMyWishList(uid: String) async throws {
+    func getMyWishList(uid: String) async throws -> [WishProduct] {
         let usersReference = database.collection("users")
         let querySnapshot = try await usersReference.document(uid).collection("wishList").getDocuments()
-
+        var myWishList: [WishProduct] = []
         if !querySnapshot.isEmpty {
             for document in querySnapshot.documents {
-                guard let wishProduct = try? Firestore.Decoder().decode(WishProduct.self, from: document.data()) else { return }
+                guard let wishProduct = try? Firestore.Decoder().decode(WishProduct.self, from: document.data()) else { return [] }
                 myWishList.append(wishProduct)
-                print(myWishList)
             }
         } else {
-            print("Document does not exist")
+            print("myWishList is empty")
         }
+        return myWishList
     }
 }

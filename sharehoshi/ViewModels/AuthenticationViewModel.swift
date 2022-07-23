@@ -60,6 +60,7 @@ class AuthenticationViewModel: ObservableObject {
             let result = try await Auth.auth().signIn(with: credential)
             DispatchQueue.main.async {
                 self.state = .signedIn
+                self.uid = result.user.uid
             }
 
             let database = Firestore.firestore()
@@ -72,7 +73,6 @@ class AuthenticationViewModel: ObservableObject {
             if !userDocument.exists {
                 try usersReference.document(result.user.uid).setData(from: userInforamation)
             }
-            uid = result.user.uid
         } catch {
             print("error: \(error.localizedDescription)")
         }

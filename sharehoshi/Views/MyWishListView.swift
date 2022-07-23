@@ -12,24 +12,18 @@ import GoogleSignIn
 
 struct MyWishListView: View {
     @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
+    @State private var myWishList: [WishProduct] = []
     let myWishListViewModel = MyWishListViewModel()
-    var uid: String? {
-        get {
-            guard let uid = authenticationViewModel.uid else { return nil }
-            return uid
-        }
-    }
 
     var body: some View {
-
-        List(myWishListViewModel.myWishList) { product in
+        List(myWishList) { product in
             WishListRowView(wishProduct: product)
                 .frame(height: 88)
         }
         .task {
             Task {
                 do {
-                    try await self.myWishListViewModel.getMyWishList(uid: "90sZjw9tG8WQesffk0OKIMkG5Lf2")
+                    myWishList = try await self.myWishListViewModel.getMyWishList(uid: self.authenticationViewModel.uid ?? "")
                 }
             }
         }
