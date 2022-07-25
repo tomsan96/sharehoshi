@@ -27,6 +27,7 @@
 		CB2CA78428882F4400F41F9C /* WishListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA78328882F4400F41F9C /* WishListRowView.swift */; };
 		CB2CA786288A92AE00F41F9C /* MyWishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA785288A92AE00F41F9C /* MyWishListViewModel.swift */; };
 		CB2CA788288C3D3300F41F9C /* AddWishProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA787288C3D3300F41F9C /* AddWishProductView.swift */; };
+		CB2CA78D288CE6BE00F41F9C /* AddWishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA78C288CE6BE00F41F9C /* AddWishListViewModel.swift */; };
 		CB6F4E972882A533008410A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F4E962882A533008410A8 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		CB2CA78328882F4400F41F9C /* WishListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListRowView.swift; sourceTree = "<group>"; };
 		CB2CA785288A92AE00F41F9C /* MyWishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishListViewModel.swift; sourceTree = "<group>"; };
 		CB2CA787288C3D3300F41F9C /* AddWishProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWishProductView.swift; sourceTree = "<group>"; };
+		CB2CA78C288CE6BE00F41F9C /* AddWishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWishListViewModel.swift; sourceTree = "<group>"; };
 		CB6F4E962882A533008410A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E4A8B6B9F808D53ACB2A189D /* Pods-sharehoshiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshiTests.release.xcconfig"; path = "Target Support Files/Pods-sharehoshiTests/Pods-sharehoshiTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA971C2E25F593E906EC966B /* Pods-sharehoshi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshi.release.xcconfig"; path = "Target Support Files/Pods-sharehoshi/Pods-sharehoshi.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				CB2CA77B2883001600F41F9C /* AuthenticationViewModel.swift */,
 				CB2CA785288A92AE00F41F9C /* MyWishListViewModel.swift */,
+				CB2CA78C288CE6BE00F41F9C /* AddWishListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				CB2CA77A2882A9FA00F41F9C /* SettingView.swift in Sources */,
 				CB2CA7822886292100F41F9C /* WishProduct.swift in Sources */,
 				CB2CA7782882A9DE00F41F9C /* MyWishListView.swift in Sources */,
+				CB2CA78D288CE6BE00F41F9C /* AddWishListViewModel.swift in Sources */,
 				CB2CA78428882F4400F41F9C /* WishListRowView.swift in Sources */,
 				CB1069DA2879403600C3A997 /* LoginView.swift in Sources */,
 				CB2CA788288C3D3300F41F9C /* AddWishProductView.swift in Sources */,
