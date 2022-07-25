@@ -46,7 +46,7 @@ struct MyWishListView: View {
                     .shadow(color: .gray, radius: 2, x: 2, y: 2)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 24, trailing: 24))
                     .sheet(isPresented: $isPresentedAddWishProductView) {
-                        AddWishProductView()
+                        AddWishListView()
                     }
                 }
             }

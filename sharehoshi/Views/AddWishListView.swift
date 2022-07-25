@@ -1,5 +1,5 @@
 //
-//  AddWishProductView.swift
+//  AddWishListView.swift
 //  sharehoshi
 //
 //  2022/07/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddWishProductView: View {
+struct AddWishListView: View {
     @State var webUrl: String = ""
     @State var name: String = ""
     @State var amount: Int?
@@ -52,6 +52,6 @@ struct AddWishProductView: View {
 
 struct AddWishProductView_Previews: PreviewProvider {
     static var previews: some View {
-        AddWishProductView()
+        AddWishListView()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  AddWishProductViewModel.swift
+//  AddWishListViewModel.swift
 //  sharehoshi
 //
 //  2022/07/24.
