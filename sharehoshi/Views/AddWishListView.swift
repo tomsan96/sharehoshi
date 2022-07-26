@@ -12,6 +12,8 @@ struct AddWishListView: View {
     @State var name: String = ""
     @State var amount: Int?
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
+    let addWishListViewModel = AddWishListViewModel()
     var body: some View {
         NavigationView {
             VStack {
@@ -38,7 +40,15 @@ struct AddWishListView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        dismiss()
+                        Task {
+                            do {
+                                try await addWishListViewModel.addWishProduct(
+                                    uid: authenticationViewModel.uid ?? "",
+                                    product: WishProduct(id: "5", name: name, imageUrl: nil, webUrl: nil, amount: amount, createdAt: Date())
+                                )
+                                dismiss()
+                            }
+                        }
                     } label: {
                         Text("保存")
                     }
