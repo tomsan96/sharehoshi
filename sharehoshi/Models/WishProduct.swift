@@ -9,40 +9,36 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct WishProduct: Codable, Identifiable {
-    let id: String
-    let name: String?
-    let imageUrl: URL?
-    let webUrl: URL?
+struct WishProduct: Codable {
+    let name: String
+    let imageUrl: String
+    let webUrl: String
     let amount: Int?
     let createdAt: Date
 
-    init(id: String, name: String?, imageUrl: URL?, webUrl: URL?, amount: Int?, createdAt: Date) {
-        self.id = id
+    init(name: String, imageUrl: String, webUrl: String, amount: Int?, createdAt: Date) {
         self.name = name
         self.imageUrl = imageUrl
         self.webUrl = webUrl
-        self.amount = amount
+        if let amount = amount {
+            self.amount = amount
+        } else {
+            self.amount = -1
+        }
         self.createdAt = createdAt
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(String.self, forKey: .id)
-        name = try container.decode(String?.self, forKey: .name)
-        let webUrlString = try container.decode(String.self, forKey: .webUrl)
-        if webUrlString.isEmpty {
-            webUrl = nil
+        name = try container.decode(String.self, forKey: .name)
+        webUrl = try container.decode(String.self, forKey: .webUrl)
+        imageUrl = try container.decode(String.self, forKey: .imageUrl)
+        let nonOptionalAmount = try container.decode(Int.self, forKey: .amount)
+        if nonOptionalAmount < 0 {
+            amount = nil
         } else {
-            webUrl = URL(string: webUrlString)
+            amount = nonOptionalAmount
         }
-        let imageUrlString = try container.decode(String.self, forKey: .imageUrl)
-        if imageUrlString.isEmpty {
-            imageUrl = nil
-        } else {
-            imageUrl = URL(string: imageUrlString)
-        }
-        amount = try container.decode(Int?.self, forKey: .amount)
         let createdAtTimeStamp = try container.decode(Timestamp.self, forKey: .createdAt)
         createdAt = createdAtTimeStamp.dateValue()
     }
