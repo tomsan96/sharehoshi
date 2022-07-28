@@ -9,11 +9,13 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct WishProduct: Codable {
+struct WishProduct: Codable, Identifiable {
+    @DocumentID var id: String?
     let name: String
     let imageUrl: String
     let webUrl: String
-    let amount: Int?
+    // NOTE: 金額未設定の場合は-1を格納する
+    let amount: Int
     let createdAt: Date
 
     init(name: String, imageUrl: String, webUrl: String, amount: Int?, createdAt: Date) {
@@ -26,20 +28,5 @@ struct WishProduct: Codable {
             self.amount = -1
         }
         self.createdAt = createdAt
-    }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        name = try container.decode(String.self, forKey: .name)
-        webUrl = try container.decode(String.self, forKey: .webUrl)
-        imageUrl = try container.decode(String.self, forKey: .imageUrl)
-        let nonOptionalAmount = try container.decode(Int.self, forKey: .amount)
-        if nonOptionalAmount < 0 {
-            amount = nil
-        } else {
-            amount = nonOptionalAmount
-        }
-        let createdAtTimeStamp = try container.decode(Timestamp.self, forKey: .createdAt)
-        createdAt = createdAtTimeStamp.dateValue()
     }
 }
