@@ -15,10 +15,17 @@ struct WishListRowView: View {
                 .frame(width: 56, height: 56)
                 .background(Color.gray)
             VStack(alignment: .leading) {
-                Text(wishProduct.name ?? "")
+                Text(wishProduct.name)
                 Spacer()
-                Text("\(String(wishProduct.amount ?? 0))円")
-                    .font(.caption)
+                Group {
+                    if let amount = wishProduct.amount {
+                        Text("\(String(amount))円")
+                            .font(.caption)
+                    } else {
+                        Text("")
+                            .font(.caption)
+                    }
+                }
             }
             .padding(.vertical, 16)
             Spacer()
@@ -31,7 +38,7 @@ struct WishListRowView: View {
 
 struct WishListRowView_Previews: PreviewProvider {
     static var previews: some View {
-        WishListRowView(wishProduct: WishProduct(id: "1", name: "", imageUrl: nil, webUrl: nil, amount: 1, createdAt: Date()))
+        WishListRowView(wishProduct: WishProduct(name: "", imageUrl: "", webUrl: "", amount: 1, createdAt: Date()))
             .previewLayout(.fixed(width: 500.0, height: 88.0))
             .padding()
     }

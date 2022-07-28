@@ -44,7 +44,7 @@ struct AddWishListView: View {
                             do {
                                 try await addWishListViewModel.addWishProduct(
                                     uid: authenticationViewModel.uid ?? "",
-                                    product: WishProduct(id: "5", name: name, imageUrl: nil, webUrl: nil, amount: amount, createdAt: Date())
+                                    product: WishProduct(name: name, imageUrl: "", webUrl: "", amount: amount, createdAt: Date())
                                 )
                                 dismiss()
                             }
