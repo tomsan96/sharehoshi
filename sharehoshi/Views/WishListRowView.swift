@@ -18,11 +18,11 @@ struct WishListRowView: View {
                 Text(wishProduct.name)
                 Spacer()
                 Group {
-                    if let amount = wishProduct.amount {
-                        Text("\(String(amount))円")
+                    if wishProduct.amount < 0 {
+                        Text("")
                             .font(.caption)
                     } else {
-                        Text("")
+                        Text("\(String(wishProduct.amount))円")
                             .font(.caption)
                     }
                 }

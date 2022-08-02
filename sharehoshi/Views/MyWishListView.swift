@@ -18,7 +18,7 @@ struct MyWishListView: View {
 
     var body: some View {
         ZStack {
-            List(myWishList, id: \.createdAt) { product in
+            List(myWishList) { product in
                 WishListRowView(wishProduct: product)
                     .frame(height: 88)
             }

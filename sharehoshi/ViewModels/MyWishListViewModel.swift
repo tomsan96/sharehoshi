@@ -18,12 +18,19 @@ class MyWishListViewModel: ObservableObject {
         var myWishList: [WishProduct] = []
         if !querySnapshot.isEmpty {
             for document in querySnapshot.documents {
-                guard let wishProduct = try? Firestore.Decoder().decode(WishProduct.self, from: document.data()) else { return [] }
+                guard let wishProduct = try? document.data(as: WishProduct.self) else { return [] }
                 myWishList.append(wishProduct)
             }
         } else {
             print("myWishList is empty")
         }
         return myWishList
+    }
+
+    func deleteMyWishList(uid: String, ids: [String]) async throws {
+        for id in ids {
+            let usersReference = database.collection("users")
+            _ = try await usersReference.document(id).delete()
+        }
     }
 }
