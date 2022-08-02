@@ -18,14 +18,27 @@ struct MyWishListView: View {
 
     var body: some View {
         ZStack {
-            List(myWishList) { product in
-                WishListRowView(wishProduct: product)
-                    .frame(height: 88)
+            List {
+                ForEach(myWishList) { product in
+                    WishListRowView(wishProduct: product)
+                        .frame(height: 88)
+                }
+                .onDelete { indexSet in
+                    // TODO: indexSetが複数の場合の対応
+                    guard let index = indexSet.first else { return }
+                    let ids: [String?] = [myWishList[index].id]
+                    Task {
+                        do {
+                            _ = try await self.myWishListViewModel.deleteMyWishList(uid: self.authenticationViewModel.uid ?? "", ids: ids)
+                            myWishList = try await getMyWishList()
+                        }
+                    }
+                }
             }
             .task {
                 Task {
                     do {
-                        myWishList = try await self.myWishListViewModel.getMyWishList(uid: self.authenticationViewModel.uid ?? "")
+                        myWishList = try await getMyWishList()
                     }
                 }
             }
@@ -51,6 +64,11 @@ struct MyWishListView: View {
                 }
             }
         }
+    }
+
+    private func getMyWishList() async throws -> [WishProduct] {
+        myWishList = try await self.myWishListViewModel.getMyWishList(uid: self.authenticationViewModel.uid ?? "")
+        return myWishList
     }
 }
 
