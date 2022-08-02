@@ -10,7 +10,7 @@ import SwiftUI
 struct AddWishListView: View {
     @State var webUrl: String = ""
     @State var name: String = ""
-    @State var amount: Int?
+    @State var amount: String = ""
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
     var delegate: AddWishListViewDelegate?
@@ -24,7 +24,7 @@ struct AddWishListView: View {
                 TextField("商品名", text: $name)
                     .frame(height: 40)
                 Divider()
-                TextField("金額", value: $amount, formatter: NumberFormatter())
+                TextField("金額", text: $amount)
                     .frame(height: 40)
                     .keyboardType(.numberPad)
                 Divider()
@@ -45,7 +45,7 @@ struct AddWishListView: View {
                             do {
                                 try await addWishListViewModel.addWishProduct(
                                     uid: authenticationViewModel.uid ?? "",
-                                    product: WishProduct(name: name, imageUrl: "", webUrl: "", amount: amount, createdAt: Date())
+                                    product: WishProduct(name: name, imageUrl: "", webUrl: "", amount: Int(amount), createdAt: Date())
                                 )
                                 try await delegate?.handleDismiss()
                                 dismiss()
