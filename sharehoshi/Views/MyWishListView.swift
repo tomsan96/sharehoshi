@@ -58,8 +58,10 @@ struct MyWishListView: View {
                     .cornerRadius(32)
                     .shadow(color: .gray, radius: 2, x: 2, y: 2)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 24, trailing: 24))
-                    .sheet(isPresented: $isPresentedAddWishProductView) {
-                        AddWishListView()
+                    .sheet(isPresented: $isPresentedAddWishProductView) { () -> AddWishListView in
+                        var view = AddWishListView()
+                        view.delegate = self
+                        return view
                     }
                 }
             }
@@ -69,6 +71,12 @@ struct MyWishListView: View {
     private func getMyWishList() async throws -> [WishProduct] {
         myWishList = try await self.myWishListViewModel.getMyWishList(uid: self.authenticationViewModel.uid ?? "")
         return myWishList
+    }
+}
+
+extension MyWishListView: AddWishListViewDelegate {
+    func handleDismiss() async throws {
+        myWishList = try await getMyWishList()
     }
 }
 
