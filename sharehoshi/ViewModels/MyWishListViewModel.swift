@@ -27,10 +27,11 @@ class MyWishListViewModel: ObservableObject {
         return myWishList
     }
 
-    func deleteMyWishList(uid: String, ids: [String]) async throws {
+    func deleteMyWishList(uid: String, ids: [String?]) async throws {
         for id in ids {
+            guard let id = id else { return }
             let usersReference = database.collection("users")
-            _ = try await usersReference.document(id).delete()
+            _ = try await usersReference.document(uid).collection("wishList").document(id).delete()
         }
     }
 }
