@@ -13,6 +13,7 @@ struct AddWishListView: View {
     @State var amount: Int?
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
+    var delegate: AddWishListViewDelegate?
     let addWishListViewModel = AddWishListViewModel()
     var body: some View {
         NavigationView {
@@ -46,6 +47,7 @@ struct AddWishListView: View {
                                     uid: authenticationViewModel.uid ?? "",
                                     product: WishProduct(name: name, imageUrl: "", webUrl: "", amount: amount, createdAt: Date())
                                 )
+                                try await delegate?.handleDismiss()
                                 dismiss()
                             }
                         }
