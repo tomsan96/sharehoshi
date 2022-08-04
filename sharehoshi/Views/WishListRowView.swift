@@ -38,7 +38,7 @@ struct WishListRowView: View {
 
 struct WishListRowView_Previews: PreviewProvider {
     static var previews: some View {
-        WishListRowView(wishProduct: WishProduct(name: "", imageUrl: "", webUrl: "", amount: 1, createdAt: Date()))
+        WishListRowView(wishProduct: WishProduct(name: "", imageUrl: "", webUrl: "", amount: 1, createdAt: Date(), updatedAt: Date()))
             .previewLayout(.fixed(width: 500.0, height: 88.0))
             .padding()
     }
