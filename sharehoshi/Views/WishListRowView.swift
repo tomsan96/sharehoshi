@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct WishListRowView: View {
+    @State var isPresentedEditWishProductView: Bool = false
     var wishProduct: WishProduct
     var body: some View {
         HStack {
@@ -29,9 +30,22 @@ struct WishListRowView: View {
             }
             .padding(.vertical, 16)
             Spacer()
-            Button("編集") {
-                // TODO: 編集画面表示
+            Button {
+                isPresentedEditWishProductView = true
+            } label: {
+                Text("編集")
             }
+            .sheet(isPresented: $isPresentedEditWishProductView) {
+                EditWishListView(product: wishProduct)
+            }
+
+//            Button("編集") {
+//                isPresentedEditWishProductView = true
+//            }
+//            .sheet(isPresented: $isPresentedEditWishProductView) { () -> EditWishListView in
+//                let view = EditWishListView(product: wishProduct)
+//                return view
+//            }
         }
     }
 }

@@ -19,6 +19,8 @@
 		CB1069F32879403800C3A997 /* SharehoshiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F22879403800C3A997 /* SharehoshiUITests.swift */; };
 		CB1069F52879403800C3A997 /* SharehoshiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */; };
 		CB106A032879E9E200C3A997 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB106A022879E9E200C3A997 /* GoogleService-Info.plist */; };
+		CB164FAE289A8BF900C5A220 /* EditWishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB164FAD289A8BF900C5A220 /* EditWishListView.swift */; };
+		CB164FB0289A8C8E00C5A220 /* EditWishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB164FAF289A8C8E00C5A220 /* EditWishListViewModel.swift */; };
 		CB2CA7782882A9DE00F41F9C /* MyWishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA7772882A9DE00F41F9C /* MyWishListView.swift */; };
 		CB2CA77A2882A9FA00F41F9C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA7792882A9FA00F41F9C /* SettingView.swift */; };
 		CB2CA77C2883001600F41F9C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2CA77B2883001600F41F9C /* AuthenticationViewModel.swift */; };
@@ -70,6 +72,8 @@
 		CB1069F42879403800C3A997 /* SharehoshiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharehoshiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CB106A022879E9E200C3A997 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB106A04287A77D300C3A997 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CB164FAD289A8BF900C5A220 /* EditWishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWishListView.swift; sourceTree = "<group>"; };
+		CB164FAF289A8C8E00C5A220 /* EditWishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWishListViewModel.swift; sourceTree = "<group>"; };
 		CB2CA7772882A9DE00F41F9C /* MyWishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishListView.swift; sourceTree = "<group>"; };
 		CB2CA7792882A9FA00F41F9C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		CB2CA77B2883001600F41F9C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 				CB2CA77B2883001600F41F9C /* AuthenticationViewModel.swift */,
 				CB2CA785288A92AE00F41F9C /* MyWishListViewModel.swift */,
 				CB2CA78C288CE6BE00F41F9C /* AddWishListViewModel.swift */,
+				CB164FAF289A8C8E00C5A220 /* EditWishListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				CB2CA78328882F4400F41F9C /* WishListRowView.swift */,
 				CB2CA787288C3D3300F41F9C /* AddWishListView.swift */,
 				CB0D15642899738D00A9F9C9 /* AddWishListViewDelegate.swift */,
+				CB164FAD289A8BF900C5A220 /* EditWishListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -500,10 +506,12 @@
 				CB2CA78428882F4400F41F9C /* WishListRowView.swift in Sources */,
 				CB1069DA2879403600C3A997 /* LoginView.swift in Sources */,
 				CB2CA788288C3D3300F41F9C /* AddWishListView.swift in Sources */,
+				CB164FAE289A8BF900C5A220 /* EditWishListView.swift in Sources */,
 				CB2CA7802885898800F41F9C /* User.swift in Sources */,
 				CB1069D82879403600C3A997 /* SharehoshiApp.swift in Sources */,
 				CB2CA77E288306A500F41F9C /* FooterTabView.swift in Sources */,
 				CB6F4E972882A533008410A8 /* ContentView.swift in Sources */,
+				CB164FB0289A8C8E00C5A220 /* EditWishListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
