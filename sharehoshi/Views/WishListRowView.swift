@@ -30,22 +30,13 @@ struct WishListRowView: View {
             }
             .padding(.vertical, 16)
             Spacer()
-            Button {
+            Button("編集") {
                 isPresentedEditWishProductView = true
-            } label: {
-                Text("編集")
             }
-            .sheet(isPresented: $isPresentedEditWishProductView) {
-                EditWishListView(product: wishProduct)
+            .sheet(isPresented: $isPresentedEditWishProductView) { () -> EditWishListView in
+                let view = EditWishListView(product: wishProduct)
+                return view
             }
-
-//            Button("編集") {
-//                isPresentedEditWishProductView = true
-//            }
-//            .sheet(isPresented: $isPresentedEditWishProductView) { () -> EditWishListView in
-//                let view = EditWishListView(product: wishProduct)
-//                return view
-//            }
         }
     }
 }
