@@ -18,7 +18,11 @@ struct EditWishListView: View {
     init(product: WishProduct) {
         _webUrl = State(initialValue: product.webUrl)
         _name = State(initialValue: product.name)
-        _amount = State(initialValue: String(product.amount))
+        if product.amount < 0 {
+            _amount = State(initialValue: "")
+        } else {
+            _amount = State(initialValue: String(product.amount))
+        }
     }
 
     var body: some View {
