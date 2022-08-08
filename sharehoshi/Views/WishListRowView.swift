@@ -10,6 +10,7 @@ import SwiftUI
 struct WishListRowView: View {
     @State var isPresentedEditWishProductView: Bool = false
     var wishProduct: WishProduct
+    let delegate: WishListRowViewDelegate
     var body: some View {
         HStack {
             Image("")
@@ -34,17 +35,16 @@ struct WishListRowView: View {
                 isPresentedEditWishProductView = true
             }
             .sheet(isPresented: $isPresentedEditWishProductView) { () -> EditWishListView in
-                let view = EditWishListView(product: wishProduct)
+                var view = EditWishListView(product: wishProduct)
+                view.delegate = self
                 return view
             }
         }
     }
 }
 
-struct WishListRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        WishListRowView(wishProduct: WishProduct(name: "", imageUrl: "", webUrl: "", amount: 1, createdAt: Date(), updatedAt: Date()))
-            .previewLayout(.fixed(width: 500.0, height: 88.0))
-            .padding()
+extension WishListRowView: EditWishListViewDelegate {
+    func handleAddWishListViewDismiss() async throws {
+        try await delegate.handleReloadParentView()
     }
 }

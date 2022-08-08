@@ -14,7 +14,7 @@ struct EditWishListView: View {
     let previousProduct: WishProduct
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
-    var delegate: AddWishListViewDelegate?
+    var delegate: EditWishListViewDelegate?
     let editWishListViewModel = EditWishListViewModel()
 
     init(product: WishProduct) {
@@ -56,7 +56,8 @@ struct EditWishListView: View {
                     Button {
                         Task {
                             do {
-                                _ = try await save()
+                                try await save()
+                                try await delegate?.handleAddWishListViewDismiss()
                                 dismiss()
                             }
                         }
