@@ -2,7 +2,7 @@
 //  AddWishListViewDelegate.swift
 //  sharehoshi
 //
-//  on 2022/08/03.
+//  2022/08/03.
 //
 
 import Foundation

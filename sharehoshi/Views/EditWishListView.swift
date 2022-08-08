@@ -11,11 +11,14 @@ struct EditWishListView: View {
     @State var webUrl: String
     @State var name: String
     @State var amount: String
+    let previousProduct: WishProduct
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var authenticationViewModel: AuthenticationViewModel
     var delegate: AddWishListViewDelegate?
+    let editWishListViewModel = EditWishListViewModel()
 
     init(product: WishProduct) {
+        previousProduct = product
         _webUrl = State(initialValue: product.webUrl)
         _name = State(initialValue: product.name)
         if product.amount < 0 {
@@ -53,6 +56,7 @@ struct EditWishListView: View {
                     Button {
                         Task {
                             do {
+                                _ = try await save()
                                 dismiss()
                             }
                         }
@@ -64,6 +68,25 @@ struct EditWishListView: View {
             .navigationTitle("欲しいもの編集")
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+    private func save() async throws {
+        var editData: [String: Any] = [:]
+        if previousProduct.webUrl != webUrl {
+            editData["webUrl"] = webUrl
+        }
+        if previousProduct.name != name {
+            editData["name"] = name
+        }
+        var intAmount: Int
+        if amount == "" {
+            intAmount = -1
+        } else {
+            intAmount = Int(amount) ?? -1
+        }
+        if previousProduct.amount != intAmount {
+            editData["amount"] = intAmount
+        }
+        _ = try await editWishListViewModel.editWishProduct(uid: authenticationViewModel.uid ?? "", product: previousProduct, editData: editData)
     }
 }
 
