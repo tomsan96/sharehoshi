@@ -17,8 +17,9 @@ struct WishProduct: Codable, Identifiable {
     // NOTE: 金額未設定の場合は-1を格納する
     let amount: Int
     let createdAt: Date
+    let updatedAt: Date
 
-    init(name: String, imageUrl: String, webUrl: String, amount: Int?, createdAt: Date) {
+    init(name: String, imageUrl: String, webUrl: String, amount: Int?, createdAt: Date, updatedAt: Date) {
         self.name = name
         self.imageUrl = imageUrl
         self.webUrl = webUrl
@@ -28,5 +29,6 @@ struct WishProduct: Codable, Identifiable {
             self.amount = -1
         }
         self.createdAt = createdAt
+        self.updatedAt = updatedAt
     }
 }

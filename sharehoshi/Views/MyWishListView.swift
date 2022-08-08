@@ -20,7 +20,7 @@ struct MyWishListView: View {
         ZStack {
             List {
                 ForEach(myWishList) { product in
-                    WishListRowView(wishProduct: product)
+                    WishListRowView(wishProduct: product, delegate: self)
                         .frame(height: 88)
                 }
                 .onDelete { indexSet in
@@ -75,7 +75,13 @@ struct MyWishListView: View {
 }
 
 extension MyWishListView: AddWishListViewDelegate {
-    func handleDismiss() async throws {
+    func handleAddWishListViewDismiss() async throws {
+        myWishList = try await getMyWishList()
+    }
+}
+
+extension MyWishListView: WishListRowViewDelegate {
+    func handleReloadParentView() async throws {
         myWishList = try await getMyWishList()
     }
 }

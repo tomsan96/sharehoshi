@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct WishListRowView: View {
+    @State var isPresentedEditWishProductView: Bool = false
     var wishProduct: WishProduct
+    let delegate: WishListRowViewDelegate
     var body: some View {
         HStack {
             Image("")
@@ -30,16 +32,19 @@ struct WishListRowView: View {
             .padding(.vertical, 16)
             Spacer()
             Button("編集") {
-                // TODO: 編集画面表示
+                isPresentedEditWishProductView = true
+            }
+            .sheet(isPresented: $isPresentedEditWishProductView) { () -> EditWishListView in
+                var view = EditWishListView(product: wishProduct)
+                view.delegate = self
+                return view
             }
         }
     }
 }
 
-struct WishListRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        WishListRowView(wishProduct: WishProduct(name: "", imageUrl: "", webUrl: "", amount: 1, createdAt: Date()))
-            .previewLayout(.fixed(width: 500.0, height: 88.0))
-            .padding()
+extension WishListRowView: EditWishListViewDelegate {
+    func handleAddWishListViewDismiss() async throws {
+        try await delegate.handleReloadParentView()
     }
 }
