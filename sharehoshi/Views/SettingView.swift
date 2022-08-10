@@ -10,16 +10,17 @@ import SwiftUI
 struct SettingView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
-        List {
-            NavigationLink(destination: TermsView()) {
-                Text("利用規約")
-            }
-            Button("ログアウト") {
-                viewModel.signOut()
+        NavigationView {
+            List {
+                NavigationLink(destination: TermsView()) {
+                    Text("利用規約")
+                }
+                Button("ログアウト") {
+                    viewModel.signOut()
+                }
             }
         }
     }
-
 }
 
 struct Setting_Previews: PreviewProvider {
