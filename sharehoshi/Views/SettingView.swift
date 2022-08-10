@@ -10,10 +10,14 @@ import SwiftUI
 struct SettingView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
-        VStack {
-            Text("設定")
-            Button("ログアウト") {
-                viewModel.signOut()
+        NavigationView {
+            List {
+                NavigationLink(destination: TermsView()) {
+                    Text("利用規約")
+                }
+                Button("ログアウト") {
+                    viewModel.signOut()
+                }
             }
         }
     }
