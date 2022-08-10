@@ -13,10 +13,26 @@ import GoogleSignIn
 struct LoginView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
-        GoogleSignInButton()
-            .onTapGesture {
-                viewModel.signIn()
+        NavigationView {
+            VStack {
+                Text("新規登録・ログイン")
+                    .font(.title)
+                GoogleSignInButton()
+                    .onTapGesture {
+                        viewModel.signIn()
+                    }
+                    .frame(width: 240, height: 48)
+                Text(
+                    """
+                    Googleでログインできます。
+                    下記利用規約に同意した上でログインしてください。
+                    """
+                )
+                NavigationLink(destination: TermsView()) {
+                    Text("利用規約")
+                }
             }
+        }
     }
 }
 

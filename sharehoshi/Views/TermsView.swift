@@ -272,7 +272,6 @@ struct TermsView: View {
             }
         }
         }
-        
 }
 
 struct TermsView_Previews: PreviewProvider {
