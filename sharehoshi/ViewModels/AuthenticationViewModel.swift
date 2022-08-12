@@ -87,5 +87,16 @@ class AuthenticationViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
+    
+    func deleteAccount() {
+        let user = Auth.auth().currentUser
+        user?.delete { error in
+          if let error = error {
+              print("error: \(error.localizedDescription)")
+          } else {
+              self.state = .signedOut
+          }
+        }
+    }
 
 }
