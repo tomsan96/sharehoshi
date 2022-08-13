@@ -104,7 +104,9 @@ class AuthenticationViewModel: ObservableObject {
         }
         _ = try await usersReference.document(user.uid).delete()
 
-        state = .signedOut
+        DispatchQueue.main.async {
+            self.signOut()
+        }
     }
 
 }
