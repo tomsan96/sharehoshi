@@ -88,4 +88,25 @@ class AuthenticationViewModel: ObservableObject {
         }
     }
 
+    func deleteAccount() async throws {
+        let user = Auth.auth().currentUser
+        guard let user = user else { return }
+
+        // NOTE: アカウント削除
+        let database = Firestore.firestore()
+        let usersReference = database.collection("users")
+        _ = try await user.delete()
+
+        // NOTE: DB削除
+        let querySnapshot = try await usersReference.document(user.uid).collection("wishList").getDocuments()
+        for document in querySnapshot.documents {
+            _ = try await document.reference.delete()
+        }
+        _ = try await usersReference.document(user.uid).delete()
+
+        DispatchQueue.main.async {
+            self.signOut()
+        }
+    }
+
 }
