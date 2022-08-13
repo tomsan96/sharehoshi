@@ -87,14 +87,24 @@ class AuthenticationViewModel: ObservableObject {
             print(error.localizedDescription)
         }
     }
-    
+
     func deleteAccount() {
         let user = Auth.auth().currentUser
-        user?.delete { error in
+        guard let user = user else { return }
+
+        let database = Firestore.firestore()
+        let usersReference = database.collection("users")
+        user.delete { error in
           if let error = error {
               print("error: \(error.localizedDescription)")
           } else {
-              self.state = .signedOut
+              usersReference.document(user.uid).delete {error in
+                  if let error = error {
+                      print("error: \(error.localizedDescription)")
+                  } else {
+                      self.state = .signedOut
+                  }
+              }
           }
         }
     }
