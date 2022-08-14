@@ -68,7 +68,9 @@ class AuthenticationViewModel: ObservableObject {
             let userDocument = try await usersReference.document(result.user.uid).getDocument()
             let userInforamation = User(
                 displayId: result.user.uid,
-                displayName: ""
+                displayName: "",
+                createdAt: Date(),
+                updatedAt: Date()
             )
             if !userDocument.exists {
                 try usersReference.document(result.user.uid).setData(from: userInforamation)
