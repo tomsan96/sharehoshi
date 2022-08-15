@@ -10,6 +10,11 @@ import SwiftUI
 struct FooterTabView: View {
     var body: some View {
         TabView {
+            FriendListView()
+                .tabItem {
+                    Image(systemName: "person.2.fill")
+                    Text("ともだち")
+                }
             MyWishListView()
                 .tabItem {
                     Image(systemName: "cart")
