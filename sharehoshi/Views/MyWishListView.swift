@@ -36,10 +36,10 @@ struct MyWishListView: View {
                 }
             }
             .task {
-                Task {
-                    do {
-                        myWishList = try await getMyWishList()
-                    }
+                do {
+                    myWishList = try await getMyWishList()
+                } catch {
+                    print(error.localizedDescription)
                 }
             }
             VStack {
