@@ -11,7 +11,7 @@ struct SettingView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
     @State private var isPresentedDeleteAccountAlert = false
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 NavigationLink(destination: TermsView()) {
                     Text("利用規約")
