@@ -35,6 +35,9 @@
 		CB448AEF28A15EEB000B0DB3 /* EditWishListViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB448AEE28A15EEB000B0DB3 /* EditWishListViewDelegate.swift */; };
 		CB6F4E972882A533008410A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F4E962882A533008410A8 /* ContentView.swift */; };
 		CB9A651628A3FBF600A5792C /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A651528A3FBF600A5792C /* TermsView.swift */; };
+		CB9A651828A9120E00A5792C /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A651728A9120E00A5792C /* Friend.swift */; };
+		CB9A651C28AA83C900A5792C /* FriendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A651B28AA83C900A5792C /* FriendListView.swift */; };
+		CB9A651E28AA884300A5792C /* FriendListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9A651D28AA884300A5792C /* FriendListRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		CB448AEE28A15EEB000B0DB3 /* EditWishListViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWishListViewDelegate.swift; sourceTree = "<group>"; };
 		CB6F4E962882A533008410A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CB9A651528A3FBF600A5792C /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
+		CB9A651728A9120E00A5792C /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		CB9A651B28AA83C900A5792C /* FriendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
+		CB9A651D28AA884300A5792C /* FriendListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListRowView.swift; sourceTree = "<group>"; };
 		E4A8B6B9F808D53ACB2A189D /* Pods-sharehoshiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshiTests.release.xcconfig"; path = "Target Support Files/Pods-sharehoshiTests/Pods-sharehoshiTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA971C2E25F593E906EC966B /* Pods-sharehoshi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharehoshi.release.xcconfig"; path = "Target Support Files/Pods-sharehoshi/Pods-sharehoshi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +207,7 @@
 			children = (
 				CB2CA77F2885898800F41F9C /* User.swift */,
 				CB2CA7812886292100F41F9C /* WishProduct.swift */,
+				CB9A651728A9120E00A5792C /* Friend.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,6 +237,8 @@
 				CB448AEE28A15EEB000B0DB3 /* EditWishListViewDelegate.swift */,
 				CB448AEC28A15ED7000B0DB3 /* WishListRowViewDelegate.swift */,
 				CB9A651528A3FBF600A5792C /* TermsView.swift */,
+				CB9A651B28AA83C900A5792C /* FriendListView.swift */,
+				CB9A651D28AA884300A5792C /* FriendListRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -512,6 +521,8 @@
 				CB2CA7822886292100F41F9C /* WishProduct.swift in Sources */,
 				CB2CA7782882A9DE00F41F9C /* MyWishListView.swift in Sources */,
 				CB448AEF28A15EEB000B0DB3 /* EditWishListViewDelegate.swift in Sources */,
+				CB9A651E28AA884300A5792C /* FriendListRowView.swift in Sources */,
+				CB9A651828A9120E00A5792C /* Friend.swift in Sources */,
 				CB2CA78D288CE6BE00F41F9C /* AddWishListViewModel.swift in Sources */,
 				CB2CA78428882F4400F41F9C /* WishListRowView.swift in Sources */,
 				CB1069DA2879403600C3A997 /* LoginView.swift in Sources */,
@@ -521,6 +532,7 @@
 				CB1069D82879403600C3A997 /* SharehoshiApp.swift in Sources */,
 				CB448AED28A15ED7000B0DB3 /* WishListRowViewDelegate.swift in Sources */,
 				CB2CA77E288306A500F41F9C /* FooterTabView.swift in Sources */,
+				CB9A651C28AA83C900A5792C /* FriendListView.swift in Sources */,
 				CB6F4E972882A533008410A8 /* ContentView.swift in Sources */,
 				CB9A651628A3FBF600A5792C /* TermsView.swift in Sources */,
 				CB164FB0289A8C8E00C5A220 /* EditWishListViewModel.swift in Sources */,
