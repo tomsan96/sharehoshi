@@ -16,7 +16,7 @@ struct AddWishListView: View {
     var delegate: AddWishListViewDelegate?
     let addWishListViewModel = AddWishListViewModel()
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 TextField("URL", text: $webUrl)
                     .frame(height: 40)

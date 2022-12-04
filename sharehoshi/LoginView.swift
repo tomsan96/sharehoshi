@@ -13,7 +13,7 @@ import GoogleSignIn
 struct LoginView: View {
     @EnvironmentObject var viewModel: AuthenticationViewModel
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Text("新規登録・ログイン")
                     .font(.title)
