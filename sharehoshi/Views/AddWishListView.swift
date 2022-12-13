@@ -45,7 +45,7 @@ struct AddWishListView: View {
                             do {
                                 try await addWishListViewModel.addWishProduct(
                                     uid: authenticationViewModel.uid ?? "",
-                                    product: WishProduct(name: name, imageUrl: "", webUrl: "", amount: Int(amount), createdAt: Date(), updatedAt: Date())
+                                    product: WishProduct(name: name, imageUrl: "", webUrl: webUrl, amount: Int(amount), createdAt: Date(), updatedAt: Date())
                                 )
                                 try await delegate?.handleAddWishListViewDismiss()
                                 dismiss()

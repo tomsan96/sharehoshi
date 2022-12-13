@@ -31,9 +31,13 @@ struct WishListRowView: View {
             }
             .padding(.vertical, 16)
             Spacer()
-            Button("編集") {
-                isPresentedEditWishProductView = true
+            if let webUrl = URL(string: wishProduct.webUrl) {
+                Link("", destination: webUrl)
             }
+            Text("編集")
+                .onTapGesture {
+                    isPresentedEditWishProductView = true
+                }
             .sheet(isPresented: $isPresentedEditWishProductView) { () -> EditWishListView in
                 var view = EditWishListView(product: wishProduct)
                 view.delegate = self
