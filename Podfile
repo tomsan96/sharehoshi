@@ -10,6 +10,7 @@ target 'sharehoshi' do
   pod 'GoogleSignIn'
   pod 'FirebaseFirestore',  '~> 9.0'
   pod 'FirebaseFirestoreSwift',  '~> 9.0'
+  pod 'Firebase/Storage'
   target 'sharehoshiTests' do
     inherit! :search_paths
     # Pods for testing
